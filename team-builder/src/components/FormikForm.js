@@ -29,17 +29,18 @@ const OnboardingForm = ({ values, errors, touched, status }) => {
         )}
 
         <label>
-          Terms of Service
+          Read Terms of Service
           <Field type="checkbox" name="terms" checked={values.terms} />
         </label>
         <button>Submit</button>
       </Form>
       {forms.map(form => (
-        <ul className="response">
-          <li>Name:{form.name}</li>
-          <li>Email:{form.email}</li>
-          <li>Password:{form.password}</li>
-        </ul>
+        <div className="response">
+          <h4>Thank you!</h4>
+          <p>Name:{form.name}</p>
+          <p>Email:{form.email}</p>
+          <p>Password:{form.password}</p>
+        </div>
       ))}
     </div>
   );

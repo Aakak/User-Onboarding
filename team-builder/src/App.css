@@ -3,28 +3,35 @@ body{
   background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   display: flex;
 }
 
-.onboard-form {
+.error{
+  color: red;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.App{
   font-family: 'roboto', serif;
   text-align: center;
   color: white;
-  background-color:rgba(0, 0, 0, 0.8);
+  background-color:rgba(0, 0, 0, 0.7);
+  margin: 80px 0 0 380px;
   padding: 32px;
   letter-spacing: 2px;
-  width: 500px;
-  height: 500px;
-  display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  width: 550px;
+  height: 500px;
 }
+
 
 form {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
+
 
 input, textarea {
   width: 200px;
@@ -36,7 +43,8 @@ input, textarea {
 }
 
 button {
-  background: orange;
+  background: darkmagenta;
+  color: white;
   padding: 10px 15px;
   margin-top: 20px;
   width: 170px;
@@ -61,19 +69,14 @@ label {
 }
 
 .response {
-  background: #ffffff;
-  color: #191919;
+  background: black;
+  color: white;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 5px 2px rgba(0, 0, 0, 0.24);
-  width: 100%;
-  max-width: 250px;
+  text-decoration: none;
   padding: 10px;
   margin: 16px auto;
   text-align: center;
 }
 
-.member h1{
-  color:d dimgrey;
-  font-size: 1.8rem;
-}
 
 
