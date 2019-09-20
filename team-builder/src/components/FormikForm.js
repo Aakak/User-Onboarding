@@ -13,6 +13,7 @@ const OnboardingForm = ({ values, errors, touched, status }) => {
 
   return (
     <div className="onboard-form">
+      <h1>New User Onboarding Form</h1>
       <Form>
         <Field type="text" name="name" placeholder="Your Name" />
         {touched.name && errors.name && <p className="error">{errors.name}</p>}
@@ -34,7 +35,8 @@ const OnboardingForm = ({ values, errors, touched, status }) => {
         <button>Submit</button>
       </Form>
       {forms.map(form => (
-        <ul key={form.name}>
+        <ul className="response">
+          <li>Name:{form.name}</li>
           <li>Email:{form.email}</li>
           <li>Password:{form.password}</li>
         </ul>
@@ -56,9 +58,9 @@ const FormikForm = withFormik({
   },
 
   validationSchema: Yup.object().shape({
-    name: Yup.string().required("You must enter your full name "),
-    email: Yup.string().required("Enter a valid email"),
-    password: Yup.string().required("Enter you valid password")
+    name: Yup.string().required("Enter your full name "),
+    email: Yup.string().required("Enter your email"),
+    password: Yup.string().required("Enter your password")
   }),
 
   handleSubmit(values, { setStatus }) {
